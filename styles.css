@@ -34,13 +34,40 @@ body {
 
 }
 
+
 .dragItem {
+    /* display: inline; */
+    width: 42px;
+    height: 42px;
+    position: relative;
+    left: 20px;
+    top: -6px;
+}
+
+.task {
+    /* display: inline; */
+    position: relative;
+    width: 211px;
+    height: 37px;
+    left: 16px;
+    top: -14px;
+}
+
+.delItem {
+    /* display: inline; */
+    position: relative;
+    width: 42px;
+    height: 42px;
+    left: 12px;
+
+}
+/* .dragItem {
     Group 36
 }
 
 .addButton {
     /* box-sizing: content-box; */
-    background-color:#9953F1;
+    /* background-color:#9953F1;
     border-collapse:collapse;
     width: 42px;
     height: 12px;
@@ -52,17 +79,15 @@ body {
     letter-spacing: 0em;
     padding-top: 175px;
     padding-bottom: 19px;
-   
-
+    */ 
     /* 
 top: -951px
 left: 144px */
 
 
   
-}
 
-.addButton2 {
+.addButton {
     background-color: #833AE0;
     border-collapse: collapse;
     width: 160px;
@@ -83,12 +108,13 @@ left: 144px */
 
 
 
-#Group36 {
-position: absolute;
-width: 12px;
-height: 12px;
-left: 451px;
-top: 363px;
+#Group {
+position: relative;
+width: 24px;
+height: 24px;
+text-align: center;
+/* left: 451px;
+top: 363px; */
 
 }
 
@@ -96,19 +122,20 @@ top: 363px;
 position: absolute;
 width: 4px;
 height: 4px;
-left: 451px;
-top: 363px;
-
+/* left: 451px;
+top: 363px; */
 background: #C4C4C4;
+/* left: 43px;
+top: 131px; */
 }
 
 
 #Ellipse3 {
-position: absolute;
+position: relative;
 width: 4px;
-height: 4px;
-left: 451px;
-top: 371px;
+height: 1px;
+/* left: 451px; */
+/* top: 371px; */
 
 background: #C4C4C4;
 }
@@ -117,20 +144,20 @@ background: #C4C4C4;
 #Ellipse5 {
 position: absolute;
 width: 4px;
-height: 4px;
-left: 459px;
-top: 363px;
+height:4px;
+/* left: 459px;
+top: 363px; */
 
 background: #C4C4C4;
 }
 
 
 #Ellipse6 {
-position: absolute;
+position: relative;
 width: 4px;
-height: 4px;
-left: 459px;
-top: 371px;
+height: 1px;
+/* left: 459px;
+top: 371px; */
 
 background: #C4C4C4;
 }
