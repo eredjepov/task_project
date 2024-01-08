@@ -1,21 +1,23 @@
 body {
-     display:flex;
-     justify-content: center;
-     align-content: center;
-     min-height: 100vh;
-     margin: 0;
-     padding-top: 100px;
-     padding-bottom: 100px;
-     box-sizing: border-box;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    align-items: center
 }
 
 .block {
-
     width: 336px;
     /* height: 236px; */
     border: 2px solid #c3c3c3;
     border-radius: 10px;  
-}
+    position: relative;
+ }
+
 .header {
     border-top: 20px solid yellow;
     border-top-right-radius: 10px;
@@ -30,62 +32,57 @@ body {
     text-align: center;
     margin: 0;
     padding-top: 45px;
-    padding-bottom: 157px;
+    padding-bottom: 39px;
+ }
 
-}
+ .sort-item {
+    display: grid;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid #C4C4C4;
+    margin-left: 247px;
+    margin-right: 48px;
+   
+    /* display: inline-block;
+    border: 2px solid #c3c3c3;
+    border-radius: 5px; 
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    top: 92px;
+    right: 48px; */
+    
 
+ }
 
-.dragItem {
-    /* display: inline; */
-    width: 42px;
-    height: 42px;
-    position: relative;
-    left: 20px;
-    top: -6px;
-}
+ .wrapper {
+    border-radius: 10px;
+    border: 1px solid #C4C4C4;
+    padding: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 18px;
+    max-height: 50vh;
+    overflow-y: scroll;
+ }
 
-.task {
-    /* display: inline; */
-    position: relative;
-    width: 211px;
-    height: 37px;
-    left: 16px;
-    top: -14px;
-}
+ .row-item {
+    display: grid;
+    grid-template-columns: 42px 1fr 40px;
+ }
+ 
+ .dragItem {
+    grid-column: 1/2;
+ }
 
-.delItem {
-    /* display: inline; */
-    position: relative;
-    width: 42px;
-    height: 42px;
-    left: 12px;
+ .task {
+    grid-column: 2/3;
+ }
 
-}
-/* .dragItem {
-    Group 36
-}
+ .delItem {
+    grid-column: 3/4;
+ }
 
-.addButton {
-    /* box-sizing: content-box; */
-    /* background-color:#9953F1;
-    border-collapse:collapse;
-    width: 42px;
-    height: 12px;
-    border-radius: 25px;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0em;
-    padding-top: 175px;
-    padding-bottom: 19px;
-    */ 
-    /* 
-top: -951px
-left: 144px */
-
-
-  
 
 .addButton {
     background-color: #833AE0;
@@ -104,60 +101,32 @@ left: 144px */
 
 }
 
-
-
-
-
-#Group {
-position: relative;
-width: 24px;
-height: 24px;
-text-align: center;
-/* left: 451px;
-top: 363px; */
-
-}
-
-#Ellipse2 {
-position: absolute;
-width: 4px;
-height: 4px;
-/* left: 451px;
-top: 363px; */
-background: #C4C4C4;
-/* left: 43px;
-top: 131px; */
-}
-
-
-#Ellipse3 {
-position: relative;
-width: 4px;
-height: 1px;
-/* left: 451px; */
-/* top: 371px; */
-
-background: #C4C4C4;
-}
-
-
-#Ellipse5 {
-position: absolute;
-width: 4px;
-height:4px;
-/* left: 459px;
-top: 363px; */
-
-background: #C4C4C4;
-}
-
-
-#Ellipse6 {
-position: relative;
-width: 4px;
-height: 1px;
-/* left: 459px;
-top: 371px; */
-
-background: #C4C4C4;
-}
+.addButton {
+    position: relative;
+    background-color: #833AE0;
+    border: none;
+    width: 160px;
+    height: 42px;
+    border-radius: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+    /* vertical-align: middle; */
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ 
+ .addButton::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    background-color: red;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+ }
+ 
