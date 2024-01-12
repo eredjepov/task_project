@@ -36,22 +36,23 @@ body {
  }
 
  .sort-item {
-    display: grid;
-    height: 35px;
-    border-radius: 10px;
-    border: 2px solid #C4C4C4;
-    margin-left: 247px;
-    margin-right: 48px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+ }
    
-    /* display: inline-block;
-    border: 2px solid #c3c3c3;
-    border-radius: 5px; 
-    width: 39px;
-    height: 39px;
-    position: absolute;
-    top: 92px;
-    right: 48px; */
-    
+.sort-item-button {
+   min-height: 25px;
+   min-width: 25px;
+   padding: 15px;
+   border-radius: 10px;
+   border: 2px solid #C4C4C4;
+   background-image: url('./pictures/icon-sort.svg');
+   background-repeat: no-repeat;
+   background-position-x: center;
+   background-position-y: center;
 
  }
 
@@ -73,6 +74,11 @@ body {
  
  .dragItem {
     grid-column: 1/2;
+    background-image: url('./pictures/drag-icon.svg');
+   background-repeat: no-repeat;
+   background-position-x: center;
+   background-position-y: center;
+
  }
 
  .task {
@@ -81,6 +87,11 @@ body {
 
  .delItem {
     grid-column: 3/4;
+    background-image: url('./pictures/del-icon.svg');
+   background-repeat: no-repeat;
+   background-position-x: center;
+   background-position-y: center;
+
  }
 
 
