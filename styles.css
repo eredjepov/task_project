@@ -32,8 +32,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 10px;
-    /* padding-top: 45px;
-    padding-bottom: 39px; */
+    padding-top: 17px;
  }
 
  .sort-item {
@@ -41,20 +40,20 @@ body {
     justify-content: flex-end;
     margin-left: 25px;
     margin-right: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 7px;
+   
  }
    
 .sort-item-button {
    min-height: 25px;
    min-width: 25px;
    padding: 15px;
-   border-radius: 10px;
-   border: 2px solid #C4C4C4;
    background-image: url('./pictures/icon-sort.svg');
    background-repeat: no-repeat;
    background-position-x: center;
    background-position-y: center;
-
+   background-color: transparent;
+   border: none;
  }
 
  .wrapper {
@@ -65,7 +64,8 @@ body {
     margin-right: 25px;
     margin-bottom: 18px;
     max-height: 50vh;
-    overflow-y: scroll;
+    overflow-y: auto;
+
  }
 
  .row-item {
@@ -73,6 +73,7 @@ body {
     grid-template-columns: 42px 1fr 40px;
     min-height: 35px;
     border-radius: 10px;
+    background-color: transparent;
  }
  
  .dragItem {
@@ -81,11 +82,15 @@ body {
    background-repeat: no-repeat;
    background-position-x: center;
    background-position-y: center;
+   background-color: transparent;
+   border: none;
 
  }
 
  .task {
     grid-column: 2/3;
+    background-color: transparent;
+    border: none;
  }
 
  .delItem {
@@ -94,6 +99,8 @@ body {
    background-repeat: no-repeat;
    background-position-x: center;
    background-position-y: center;
+   background-color: transparent;
+   border: none;
 
  }
 
@@ -114,15 +121,19 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
  }
  
  .addButton::before {
-    content: url('./pictures/add-icon.svg');
+    content: '';
+    background-image: url('./pictures/add-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
     position: absolute;
     left: 0;
     top: 0;
     display: flex;
-    background-color: red;
+    background-color: rgba(153, 83, 241, 1);
     height: 42px;
     width: 42px;
     border-radius: 50%;
