@@ -31,8 +31,9 @@ body {
     letter-spacing: 0em;
     text-align: center;
     margin: 0;
-    padding-top: 45px;
-    padding-bottom: 39px;
+    padding: 10px;
+    /* padding-top: 45px;
+    padding-bottom: 39px; */
  }
 
  .sort-item {
@@ -59,7 +60,7 @@ body {
  .wrapper {
     border-radius: 10px;
     border: 1px solid #C4C4C4;
-    padding: 5px;
+    padding: 0px;
     margin-left: 25px;
     margin-right: 25px;
     margin-bottom: 18px;
@@ -70,6 +71,8 @@ body {
  .row-item {
     display: grid;
     grid-template-columns: 42px 1fr 40px;
+    min-height: 35px;
+    border-radius: 10px;
  }
  
  .dragItem {
@@ -96,25 +99,9 @@ body {
 
 
 .addButton {
-    background-color: #833AE0;
-    border-collapse: collapse;
-    width: 160px;
-    height: 44px;
-    border-radius: 25px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    text-align: center;
-    /* vertical-align: middle; */
-    align-content: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.addButton {
     position: relative;
-    background-color: #833AE0;
+    padding: 10px;
+     background-color: #833AE0;
     border: none;
     width: 160px;
     height: 42px;
@@ -130,7 +117,7 @@ body {
  }
  
  .addButton::before {
-    content: '';
+    content: url('./pictures/add-icon.svg');
     position: absolute;
     left: 0;
     top: 0;
