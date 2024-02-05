@@ -27,9 +27,36 @@
 const addButton = document.querySelector('.addButton');
 const newTask = document.querySelector('.delItem');
 const taskValue = document.querySelector('.task');
+
+
+const sortItem = document.querySelector('.sort-item-button');
+const delItem = document.querySelector('.delItem');
+
+
 addButton.addEventListener('click', () => {
     alert(taskValue.value);
     taskValue.innerText = taskValue.value;
-    rowItem.insertAdjacentHTML('afterend', '<div class="row-item" id="rowItem"> <button class="dragItem" id="dragItem"></button> <input class="task" type="text" placeholder="Введите задачу"/> <button class="delItem" id="delItem"></button> </div>');
+    const rowItem = document.querySelector('.row-item:last-child');
+    rowItem.insertAdjacentHTML(
+        'afterend', '<div class="row-item"> <button class="dragItem"></button> <input class="task" type="text"/> <button class="delItem" id="delItem"></button> </div>');
+console.log(taskValue.value[0]);
 })
-    // newTask.innerHTML = '
+
+sortItem.addEventListener('click', () => {
+    const taskList = document.querySelectorAll('.row-item .task');
+    taskList.forEach((el) => {
+        const newTaskList = [] = el.value;     
+         console.log(newTaskList);
+        })
+   console.log(taskList);            
+        })
+         
+         
+         
+         // console.log(el.value);
+        //          })
+        //          const newTaskList = taskList.sort();
+        //          console.log(newTaskList.value);
+    
+//     )
+//    console.log(taskList);
