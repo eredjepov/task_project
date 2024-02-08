@@ -47,16 +47,33 @@ sortItem.addEventListener('click', () => {
     taskList.forEach((el) => {
         const newTaskList = [] = el.value;     
          console.log(newTaskList);
-        })
-   console.log(taskList);            
+
+       
+
+    })
+    
+    console.log(taskList[1].value);
+
+    for (let i=0; i<10; i++) {
+        console.log(taskList[i].value);
+        const arr = [...taskList[i].value];
+        console.log(arr);
+    }
+    
+    console.log(arr[1].value);
+    //        const newTaskList = taskList.sort();  
+//         console.log(newTaskList.value);    
         })
          
          
          
          // console.log(el.value);
         //          })
-        //          const newTaskList = taskList.sort();
-        //          console.log(newTaskList.value);
+        //          
+        //          
     
-//     )
-//    console.log(taskList);
+
+
+list = [];
+list.sort()
+console.log(list);

@@ -5,7 +5,10 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>PROJECT</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-       <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>  
    
 </head>
 <body>
@@ -13,18 +16,20 @@
         <h1 class="header">To-Do list</h1>
         <div class="sort-item"><button class="sort-item-button"></button></div>
         <div class="wrapper" id="wrapper">
+
+            <div class="row-item"> <button class="dragItem"> </button> <input class="task" type="text" value="QWERTY"/> 
+                <button class="delItem" id="delItem"></button> 
+            </div>
+            <div class="row-item"> <button class="dragItem"></button> <input class="task" type="text" value="ASDFGH"/> <button class="delItem" id="delItem"></button> </div>
+            <div class="row-item"> <button class="dragItem"></button> <input class="task" type="text" value="ZXCVBN"/> <button class="delItem" id="delItem"></button> </div>
             <div class="row-item" id="rowItem">
             <button class="dragItem" id="dragItem"></button>
             <input class="task" type="text" placeholder="Введите задачу"/>
             <button class="delItem" id="delItem"></button>
             </div>
 
-                <!-- <div class="row-item" id="rowItem">
-                <button class="dragItem" id="dragItem"></button>
-                <input class="task" type="text" placeholder="Введите задачу"/>
-                <button class="delItem" id="delItem"></button>
-                </div>
-
+                
+<!-- 
                 <div class="row-item" id="rowItem">
                     <button class="dragItem" id="dragItem"></button>
                     <input class="task" type="text" placeholder="Введите задачу"/>
