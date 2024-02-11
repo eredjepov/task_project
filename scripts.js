@@ -44,23 +44,27 @@ console.log(taskValue.value[0]);
 
 sortItem.addEventListener('click', () => {
     const taskList = document.querySelectorAll('.row-item .task');
+    let taskListSorted = [];
     taskList.forEach((el) => {
-        const newTaskList = [] = el.value;     
+        const newTaskList = [] = el.value;
+        taskListSorted = [...taskList];   
          console.log(newTaskList);
 
-       
+
+
+         console.log(taskListSorted); 
 
     })
     
-    console.log(taskList[1].value);
+    console.log(taskListSorted);
 
-    for (let i=0; i<10; i++) {
-        console.log(taskList[i].value);
-        const arr = [...taskList[i].value];
-        console.log(arr);
-    }
+    // for (let i=0; i<10; i++) {
+    //     console.log(taskList[i].value);
+    //     const arr = [...taskList[i].value];
+    //     console.log(arr);
+    // }
     
-    console.log(arr[1].value);
+    // console.log(arr[1].value);
     //        const newTaskList = taskList.sort();  
 //         console.log(newTaskList.value);    
         })
@@ -74,6 +78,6 @@ sortItem.addEventListener('click', () => {
     
 
 
-list = [];
-list.sort()
-console.log(list);
+// list = [];
+// list.sort()
+// console.log(list);
