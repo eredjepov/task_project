@@ -44,40 +44,17 @@ console.log(taskValue.value[0]);
 
 sortItem.addEventListener('click', () => {
     const taskList = document.querySelectorAll('.row-item .task');
-    let taskListSorted = [];
-    taskList.forEach((el) => {
-        const newTaskList = [] = el.value;
-        taskListSorted = [...taskList];   
-         console.log(newTaskList);
+    const myNewArray = [...taskList].map((el) => el.value);
+    console.log(taskList);
+    console.log(myNewArray);
+    myNewArray.sort();
+    console.log(myNewArray);
 
-
-
-         console.log(taskListSorted); 
-
-    })
-    
-    console.log(taskListSorted);
-
-    // for (let i=0; i<10; i++) {
-    //     console.log(taskList[i].value);
-    //     const arr = [...taskList[i].value];
-    //     console.log(arr);
-    // }
-    
-    // console.log(arr[1].value);
-    //        const newTaskList = taskList.sort();  
-//         console.log(newTaskList.value);    
+    const newTaskList = document.querySelectorAll('.row-item .task');
+    console.log(newTaskList);
+    newTaskList.innerHTML = `<input class="task" type="text" value="${myNewArray[1]}"/>`;
+    console.log(newTaskList.innerHTML);
+  
+ 
         })
          
-         
-         
-         // console.log(el.value);
-        //          })
-        //          
-        //          
-    
-
-
-// list = [];
-// list.sort()
-// console.log(list);
