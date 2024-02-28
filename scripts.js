@@ -30,31 +30,54 @@ const taskValue = document.querySelector('.task');
 
 
 const sortItem = document.querySelector('.sort-item-button');
-const delItem = document.querySelector('.delItem');
+const delItems = document.querySelectorAll('.delItem');
+
+function newTaskEdit() {
+  taskValue.innerText = taskValue.value;
+  const rowItem = document.querySelector('.row-item:last-child');
+  rowItem.insertAdjacentHTML(
+      'afterend', '<div class="row-item"> <button class="dragItem"></button> <input class="task" type="text"/> <button class="delItem" id="delItem"></button> </div>');
+  
+  const delItems = document.querySelectorAll('.delItem');
+  delItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      item.parentElement.remove();
+    })
+  })
+}
+
+
+document.addEventListener('keyup', (event) => {
+    if (event.code === 'Enter') {
+      newTaskEdit()
+ }
+    });
 
 
 addButton.addEventListener('click', () => {
-    alert(taskValue.value);
-    taskValue.innerText = taskValue.value;
-    const rowItem = document.querySelector('.row-item:last-child');
-    rowItem.insertAdjacentHTML(
-        'afterend', '<div class="row-item"> <button class="dragItem"></button> <input class="task" type="text"/> <button class="delItem" id="delItem"></button> </div>');
-console.log(taskValue.value[0]);
+  newTaskEdit()
 })
+  // 1/можно ли сажать два обработчика события?
+  // 2. рамка бегает
+       
+sortItem.addEventListener("click", () => {
+    const tasksList = document.querySelectorAll(
+    ".row-item:not(:last-child) .task"
+    );
+          
+            //  методы slice или splice попробовать сделать по аналогии, убирать посл элемент.
+            
+    const tasksListSorted = [...tasksList].map((el) => el.value).sort();
+        console.log(tasksListSorted);
+            tasksList.forEach((task, index) => {
+              if (task !== "") {
+                task.value = tasksListSorted[index];
+              }
+            });
+                    });
 
-sortItem.addEventListener('click', () => {
-    const taskList = document.querySelectorAll('.row-item .task');
-    const myNewArray = [...taskList].map((el) => el.value);
-    console.log(taskList);
-    console.log(myNewArray);
-    myNewArray.sort();
-    console.log(myNewArray);
-
-    const newTaskList = document.querySelectorAll('.row-item .task');
-    console.log(newTaskList);
-    newTaskList.innerHTML = `<input class="task" type="text" value="${myNewArray[1]}"/>`;
-    console.log(newTaskList.innerHTML);
-  
- 
-        })
-         
+delItems.forEach((item) => {
+  item.addEventListener("click", () => {
+  item.parentElement.remove();
+  })
+});
